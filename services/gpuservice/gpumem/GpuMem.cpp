@@ -48,7 +48,6 @@ void GpuMem::initialize() {
     if (fd < 0) {
         ALOGE("Failed to retrieve pinned program from %s [%d(%s)]", kGpuMemTotalProgPath, errno,
               strerror(errno));
-        while(true) sleep(1);
         return;
     }
 
